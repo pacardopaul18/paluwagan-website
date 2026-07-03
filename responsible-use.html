@@ -193,9 +193,11 @@ main a{transition:color .15s ease}
 .mnav-btn{display:none}
 @media(max-width:800px){
   .mnav-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;
-    min-height:44px;padding:0 14px;border-radius:12px;background:transparent;
-    border:1px solid var(--hairline);color:var(--navy);font-family:var(--font-sans);
+    min-height:44px;padding:0 14px;border-radius:12px;background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.22);color:#dbe2ec;font-family:var(--font-sans);
     font-weight:700;font-size:14px;cursor:pointer}
+  .mnav-btn:hover{background:rgba(255,255,255,.12)}
+  .mnav-btn:focus-visible{outline:2px solid #dbe2ec;outline-offset:2px}
   .mnav-panel{display:none;position:absolute;top:100%;right:16px;left:16px;margin-top:8px;
     background:var(--white);border:1px solid var(--hairline);border-radius:14px;
     box-shadow:var(--shadow-lg);padding:8px;z-index:900}
