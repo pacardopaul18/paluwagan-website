@@ -1,0 +1,30 @@
+/* Paluwagan web - progressive layer over the design system (a11y + interactivity) */
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--navy);color:var(--cream);
+  padding:10px 16px;border-radius:0 0 10px 0;z-index:1000;font-weight:700;text-decoration:none}
+.skip-link:focus{left:0}
+:where(a,button,input,textarea,summary,[tabindex]):focus-visible{
+  outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+img,svg{max-width:100%}
+main a{transition:color .15s ease}
+.faq-q{transition:background .15s ease}
+.faq-q:hover{background:rgba(16,42,76,.02)}
+.faq-a{animation:faqIn .18s ease}
+@keyframes faqIn{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}
+/* mobile nav (injected by site.js when the desktop links are hidden) */
+.mnav-btn{display:none}
+@media(max-width:800px){
+  .mnav-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    min-height:44px;padding:0 14px;border-radius:12px;background:transparent;
+    border:1px solid var(--hairline);color:var(--navy);font-family:var(--font-sans);
+    font-weight:700;font-size:14px;cursor:pointer}
+  .mnav-panel{display:none;position:absolute;top:100%;right:16px;left:16px;margin-top:8px;
+    background:var(--white);border:1px solid var(--hairline);border-radius:14px;
+    box-shadow:var(--shadow-lg);padding:8px;z-index:900}
+  .mnav-panel.open{display:block}
+  .mnav-panel a{display:block;padding:13px 14px;border-radius:10px;text-decoration:none;
+    color:var(--navy);font-weight:600;font-size:15px}
+  .mnav-panel a:hover{background:var(--cream)}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}

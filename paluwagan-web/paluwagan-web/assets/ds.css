@@ -1,0 +1,159 @@
+/* Paluwagan webfonts — DM Sans (UI/body) + DM Mono (figures, IDs, sublabels).
+   Loaded from Google Fonts. Swap for self-hosted woff2 when available. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap');
+
+/* ============================================================
+   Paluwagan - Color tokens
+   Navy + gold spine over a dominant warm cream. GOLD is the
+   primary call-to-action fill AND the hairline/ring accent
+   (one gold CTA per screen). GREEN is the positive/status color
+   (paid, on-track, received). Status is icon + label + color,
+   never color alone.
+   Reconciled 2026-06-27 against the real app (app/globals.css).
+   ============================================================ */
+:root {
+  /* --- Brand core --- */
+  --navy:            #102A4C;  /* primary text, headers, hero block */
+  --navy-2:          #1B3A63;  /* raised navy surface / hero gradient stop */
+  --gold:            #C9A84C;  /* PRIMARY CTA fill + hairline/ring accent */
+  --gold-soft:       #F0E6C8;  /* gold tint fill (avatars, focus ring, seg-active) */
+
+  /* --- Positive green (contributions, on-track, payouts, received) --- */
+  --green:           #2E7D5B;
+  --green-deep:      #266B4E;
+  --green-bright:    #35906A;
+  --green-tint:      #E3F0E9;  /* success-soft fill (real app value) */
+
+  /* --- Neutrals / surfaces --- */
+  --cream:           #FAF6EC;  /* dominant warm background (the app stage) */
+  --white:           #FFFFFF;  /* cards */
+  --ink:             #1B2433;  /* primary body text */
+  --muted:           #6B7686;  /* secondary text */
+  --hairline:        #E7E2D6;  /* warm hairline border */
+
+  /* --- Semantic --- */
+  --success:         #2E7D5B;
+  --success-soft:    #E3F0E9;  /* real app value (was #E1EEE7) */
+  --warning:         #B4762A;  /* late / amber */
+  --warning-soft:    #F6ECDD;  /* real app value (was #F6EBD9) */
+  --danger:          #B23B3B;  /* missed / red */
+  --danger-soft:     #F6E4E2;  /* real app value (was #F4E2E0) */
+
+  /* --- Semantic aliases (use these in product) --- */
+  --bg-app:          var(--cream);
+  --surface-card:    var(--white);
+  --surface-raised:  var(--navy);
+  --surface-sunken:  #F3EEE0;      /* cream pressed/track */
+
+  --text-strong:     var(--navy);
+  --text-body:       var(--ink);
+  --text-muted:      var(--muted);
+  --text-on-navy:    var(--cream);
+  --text-on-gold:    var(--navy);    /* gold CTA uses navy text (real app) */
+  --text-on-green:   var(--white);
+
+  --border-hairline: var(--hairline);
+  --border-strong:   #D8D2C2;
+  --ring-focus:      var(--gold);    /* inputs focus with a gold border + gold-soft ring (real app) */
+
+  --accent-action:   var(--gold);    /* primary action = gold (btn-gold) */
+  --accent:          var(--green);   /* positive/status accent = green */
+  --accent-spine:    var(--gold);    /* hairline / ring accent */
+}
+/* ============================================================
+   Paluwagan - Typography tokens
+   DM Sans for EVERYTHING, including peso figures, member counts,
+   and cycle numbers. The real app loads only DM Sans (weights
+   400-800); DM Mono is NOT loaded in-app and is kept here only
+   as an optional fallback family. Large display figures carry
+   the hero and amount numerals.
+   Reconciled 2026-06-27 against the real app (app/globals.css).
+   ============================================================ */
+:root {
+  --font-sans: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, 'SF Mono', Menlo, monospace; /* not used in-app */
+
+  /* Type scale (px) - matches the real app */
+  --text-display: 34px;  /* hero figure (pot / count) 700 */
+  --text-amount-lg: 28px;/* big amount (.amount-big) 700 */
+  --text-h1:    26px;    /* auth title / splash heading 700 */
+  --text-h2:    20px;
+  --text-h3:    17px;    /* app header title */
+  --text-body:  15px;    /* inputs / buttons body */
+  --text-sm:    14px;
+  --text-label: 13px;    /* field label 600 */
+  --text-xs:    12px;    /* tiny / footnote */
+  --text-amount: 16px;   /* inline amounts, DM Sans 700 */
+
+  /* Weights (DM Sans 400-800 loaded) */
+  --fw-regular: 400;  /* @kind font */
+  --fw-medium:  500;  /* @kind font */
+  --fw-semibold: 600; /* @kind font */
+  --fw-bold:    700;  /* @kind font */
+  --fw-black:   800;  /* @kind font - brand mark / splash mark */
+
+  /* Line heights */
+  --lh-tight:   1.2;  /* @kind font */
+  --lh-snug:    1.35; /* @kind font */
+  --lh-body:    1.5;  /* @kind font */
+
+  /* Letter spacing */
+  --ls-eyebrow: 0.16em;  /* gold uppercase eyebrows / hero labels */
+  --ls-tight:   -0.01em; /* display figures */
+}
+
+/* Convenience text roles */
+.ds-display { font: var(--fw-bold) var(--text-display)/var(--lh-tight) var(--font-sans); letter-spacing: var(--ls-tight); color: var(--text-strong); }
+.ds-h1   { font: var(--fw-bold) var(--text-h1)/var(--lh-tight) var(--font-sans); letter-spacing: var(--ls-tight); color: var(--text-strong); }
+.ds-h2   { font: var(--fw-bold) var(--text-h2)/var(--lh-snug) var(--font-sans); color: var(--text-strong); }
+.ds-body { font: var(--fw-regular) var(--text-body)/var(--lh-body) var(--font-sans); color: var(--text-body); }
+.ds-label{ font: var(--fw-semibold) var(--text-label)/var(--lh-snug) var(--font-sans); color: var(--text-body); }
+.ds-eyebrow { font: var(--fw-semibold) var(--text-xs)/1 var(--font-sans); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--muted); }
+/* Amounts render in DM Sans (700), NOT DM Mono - this is how the app shows peso figures. */
+.ds-amount { font: var(--fw-bold) var(--text-amount)/1.2 var(--font-sans); color: var(--text-strong); font-feature-settings: 'tnum' 1; }
+/* ============================================================
+   Paluwagan - Spacing, radius, elevation
+   4pt base. Generous padding for a relaxed consumer feel.
+   Friendly, round radii. Soft, warm, low shadows.
+   Reconciled 2026-06-27 against the real app (app/globals.css):
+   cards/hero/panels = 16, buttons = 14, inputs/pills/tabs = 12.
+   ============================================================ */
+:root {
+  /* Spacing - 4pt base */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Radius - friendly + round (real app values) */
+  --radius-sm:    12px;   /* inputs, pills, tabs, segmented (.input/.pill/.tab) */
+  --radius-input: 12px;   /* alias for form controls */
+  --radius-md:    14px;   /* buttons (.btn) */
+  --radius-lg:    16px;   /* cards, hero, panels (.card/.hero/--radius) */
+  --radius-pill:  999px;
+  --radius-device: 42px;  /* phone device frame shell */
+
+  /* Elevation - soft, warm, low. Tinted toward navy, never pure black. */
+  --shadow-xs: 0 1px 2px rgba(16, 42, 76, 0.05);
+  --shadow-sm: 0 2px 8px rgba(16, 42, 76, 0.06);
+  --shadow-md: 0 6px 20px rgba(16, 42, 76, 0.08);
+  --shadow-lg: 0 14px 40px rgba(16, 42, 76, 0.12);
+  --shadow-gold: 0 6px 16px rgba(201, 168, 76, 0.35); /* gold CTA lift (real .btn-gold) */
+
+  /* Overlays */
+  --overlay-navy: rgba(16, 42, 76, 0.40);  /* modal / bottom-sheet scrim */
+
+  /* Touch */
+  --tap-min:     48px;   /* primary actions */
+  --tap-comfort: 44px;   /* minimum hit target */
+
+  /* App frame (Samsung A35) */
+  --app-width: 412px;
+  --app-min:   360px;
+}
