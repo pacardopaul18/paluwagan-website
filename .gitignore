@@ -1,0 +1,18 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Vercel
+.vercel/
+
+# Logs / env (this is a no-build static site; nothing secret belongs in the repo)
+*.log
+.env
+.env.*
