@@ -192,7 +192,6 @@ main a{transition:color .15s ease}
 /* mobile nav (injected by site.js when the desktop links are hidden) */
 .mnav-btn{display:none}
 .mnav-panel{display:none}
-@media(max-width:560px){.pl-nav-cta{display:none}}
 @media(max-width:800px){
   .mnav-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;
     min-height:44px;padding:0 14px;border-radius:12px;background:rgba(255,255,255,.06);
@@ -247,7 +246,6 @@ main a{transition:color .15s ease}
         <a href="transparency.html" style="text-decoration:none;font-size:14.5px;font-weight:600;color:#dbe2ec;transition:color .15s ease">Transparency</a>
         <a href="faq.html" style="text-decoration:none;font-size:14.5px;font-weight:600;color:#dbe2ec;transition:color .15s ease">FAQ</a>
       </nav>
-      <a class="pl-nav-cta" href="index.html#waitlist" style="text-decoration:none;flex:none;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border-radius:14px;background:var(--gold);color:var(--navy);border:1px solid var(--gold);font-family:var(--font-sans);font-weight:700;font-size:14.5px;box-shadow:var(--shadow-gold);transition:transform .05s ease">Join the waitlist</a>
     </div>
   </header>
 
@@ -495,7 +493,7 @@ main a{transition:color .15s ease}
     if(getComputedStyle(header).position === "static"){ header.style.position = "relative"; }
     var btn = document.createElement("button");
     btn.type = "button"; btn.className = "mnav-btn"; btn.setAttribute("aria-expanded","false");
-    btn.setAttribute("aria-label","Open menu"); btn.textContent = "Menu";
+    btn.setAttribute("aria-label","Open menu"); btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>';
     var panel = document.createElement("nav");
     panel.className = "mnav-panel"; panel.setAttribute("aria-label","Site");
     var as = links.querySelectorAll("a");
@@ -505,7 +503,7 @@ main a{transition:color .15s ease}
     }
     btn.addEventListener("click", function(){
       var open = panel.classList.toggle("open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-expanded", open ? "true" : "false"); btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     });
     links.parentNode.insertBefore(btn, links.nextSibling);
     header.appendChild(panel);

@@ -13,7 +13,6 @@ main a{transition:color .15s ease}
 /* mobile nav (injected by site.js when the desktop links are hidden) */
 .mnav-btn{display:none}
 .mnav-panel{display:none}
-@media(max-width:560px){.pl-nav-cta{display:none}}
 @media(max-width:800px){
   .mnav-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;
     min-height:44px;padding:0 14px;border-radius:12px;background:rgba(255,255,255,.06);

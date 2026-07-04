@@ -132,7 +132,7 @@
     if(getComputedStyle(header).position === "static"){ header.style.position = "relative"; }
     var btn = document.createElement("button");
     btn.type = "button"; btn.className = "mnav-btn"; btn.setAttribute("aria-expanded","false");
-    btn.setAttribute("aria-label","Open menu"); btn.textContent = "Menu";
+    btn.setAttribute("aria-label","Open menu"); btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>';
     var panel = document.createElement("nav");
     panel.className = "mnav-panel"; panel.setAttribute("aria-label","Site");
     var as = links.querySelectorAll("a");
@@ -142,7 +142,7 @@
     }
     btn.addEventListener("click", function(){
       var open = panel.classList.toggle("open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.setAttribute("aria-expanded", open ? "true" : "false"); btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     });
     links.parentNode.insertBefore(btn, links.nextSibling);
     header.appendChild(panel);
