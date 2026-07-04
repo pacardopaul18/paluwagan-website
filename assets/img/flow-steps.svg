@@ -1,0 +1,48 @@
+<svg viewBox="0 0 1200 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ttlC dscC" width="1200" height="440">
+  <title id="ttlC">How Paluwagan works in three steps</title>
+  <desc id="dscC">Everyone contributes the same amount, Paluwagan records and confirms each payment without holding it, and one member receives the whole pot before the turn rotates.</desc>
+
+  
+  <g fill="#C9A84C">
+    <path d="M388,220 l34,0 l0,-9 l18,15 l-18,15 l0,-9 l-34,0 Z"></path>
+    <path d="M772,220 l34,0 l0,-9 l18,15 l-18,15 l0,-9 l-34,0 Z"></path>
+  </g>
+
+  
+  <rect x="48" y="60" width="332" height="320" rx="22" fill="#FFFFFF" stroke="#E7E2D6" stroke-width="1.5"></rect>
+  <circle cx="214" cy="150" r="46" fill="#F5ECD4"></circle>
+  
+  <g fill="#102A4C">
+    <circle cx="196" cy="140" r="11"></circle>
+    <path d="M177,172 C177,154 185,146 196,146 C207,146 215,154 215,172 Z"></path>
+    <circle cx="232" cy="140" r="11"></circle>
+    <path d="M213,172 C213,154 221,146 232,146 C243,146 251,154 251,172 Z"></path>
+    <circle cx="214" cy="150" r="14" stroke="#F5ECD4" stroke-width="3"></circle>
+    <path d="M190,186 C190,164 200,154 214,154 C228,154 238,164 238,186 Z" stroke="#F5ECD4" stroke-width="3"></path>
+  </g>
+  <text x="214" y="256" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-weight="700" font-size="21" fill="#102A4C" text-anchor="middle">Everyone contributes</text>
+  <text x="214" y="290" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-weight="500" font-size="15" fill="#6B7686" text-anchor="middle">The same amount each round,</text>
+  <text x="214" y="312" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-weight="500" font-size="15" fill="#6B7686" text-anchor="middle">sent directly, peso to peso.</text>
+
+  
+  <rect x="434" y="60" width="332" height="320" rx="22" fill="#FFFFFF" stroke="#E7E2D6" stroke-width="1.5"></rect>
+  <circle cx="600" cy="150" r="46" fill="#102A4C"></circle>
+  <circle cx="600" cy="150" r="24" fill="#2E7D5B"></circle>
+  <path d="M588,150 l8,8 l15,-17" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+  <text x="600" y="256" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-weight="700" font-size="21" fill="#102A4C" text-anchor="middle">Paluwagan records it</text>
+  <text x="600" y="290" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-weight="500" font-size="15" fill="#6B7686" text-anchor="middle">It confirms every payment</text>
+  <text x="600" y="312" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-weight="500" font-size="15" fill="#6B7686" text-anchor="middle">and never holds your money.</text>
+
+  
+  <rect x="820" y="60" width="332" height="320" rx="22" fill="#FFFFFF" stroke="#E7E2D6" stroke-width="1.5"></rect>
+  <circle cx="986" cy="150" r="46" fill="none" stroke="#C9A84C" stroke-width="6"></circle>
+  <circle cx="986" cy="104" r="8" fill="#C9A84C"></circle>
+  <circle cx="986" cy="104" r="2.6" fill="#FAF6EC"></circle>
+  <g fill="#102A4C">
+    <circle cx="986" cy="142" r="13"></circle>
+    <path d="M963,182 C963,162 973,152 986,152 C999,152 1009,162 1009,182 Z"></path>
+  </g>
+  <text x="986" y="256" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-weight="700" font-size="21" fill="#102A4C" text-anchor="middle">One member receives</text>
+  <text x="986" y="290" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-weight="500" font-size="15" fill="#6B7686" text-anchor="middle">The whole pot this round,</text>
+  <text x="986" y="312" font-family="&#39;DM Sans&#39;, Arial, sans-serif" font-weight="500" font-size="15" fill="#6B7686" text-anchor="middle">then it's the next turn.</text>
+</svg>
