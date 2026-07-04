@@ -90,12 +90,16 @@
       if(!email){ showErr(form, "Please enter your email."); return; }
       if(isContact && !messageIn(form)){ showErr(form, "Please add a short message."); return; }
 
-      function succeed(){
+      function succeed(status){
         if(!done) return;
         var echo = done.querySelectorAll(".js-echo-email");
         for(var i=0;i<echo.length;i++){ echo[i].textContent = email; }
         var nm = done.querySelector(".js-name");
         if(nm){ var n = nameIn(form); nm.textContent = n ? n.split(/\s+/)[0] : "kaibigan"; }
+        if(status === 409){
+          var ti = done.querySelector(".js-ok-title"); if(ti){ ti.textContent = "You're already on the list!"; }
+          var so = done.querySelector(".js-socials"); if(so){ so.removeAttribute("hidden"); }
+        }
         form.setAttribute("hidden","");
         done.removeAttribute("hidden");
         var f = done.querySelector("h1,h2,h3,[tabindex],button,a");
@@ -118,7 +122,7 @@
       t.disabled = true;
       postCapture(table, payload).then(function(r){
         t.disabled = false;
-        if(r.ok){ succeed(); }
+        if(r.ok){ succeed(r.status); }
         else { showErr(form, "Sorry, something went wrong. Please try again in a moment."); }
       });
     });
