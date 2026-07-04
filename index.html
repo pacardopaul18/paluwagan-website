@@ -770,10 +770,14 @@ main a{transition:color .15s ease}
       var a = document.createElement("a"); a.href = as[i].getAttribute("href");
       a.textContent = as[i].textContent.trim(); panel.appendChild(a);
     }
-    btn.addEventListener("click", function(){
-      var open = panel.classList.toggle("open");
+    function mnavSet(open){
+      panel.classList.toggle("open", open);
       btn.setAttribute("aria-expanded", open ? "true" : "false"); btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-    });
+    }
+    btn.addEventListener("click", function(e){ e.stopPropagation(); mnavSet(!panel.classList.contains("open")); });
+    document.addEventListener("keydown", function(e){ if(e.key === "Escape" && panel.classList.contains("open")){ mnavSet(false); btn.focus(); } });
+    document.addEventListener("click", function(e){ if(panel.classList.contains("open") && !panel.contains(e.target) && e.target !== btn){ mnavSet(false); } });
+    panel.addEventListener("click", function(e){ if(e.target.tagName === "A"){ mnavSet(false); } });
     links.parentNode.insertBefore(btn, links.nextSibling);
     header.appendChild(panel);
   });
