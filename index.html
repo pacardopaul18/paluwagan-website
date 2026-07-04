@@ -190,6 +190,8 @@ main a{transition:color .15s ease}
 @keyframes faqIn{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}
 /* mobile nav (injected by site.js when the desktop links are hidden) */
 .mnav-btn{display:none}
+.mnav-panel{display:none}
+@media(max-width:560px){.pl-nav-cta{display:none}}
 @media(max-width:800px){
   .mnav-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;
     min-height:44px;padding:0 14px;border-radius:12px;background:rgba(255,255,255,.06);
@@ -238,7 +240,7 @@ main a{transition:color .15s ease}
   <!-- ============ NAV ============ -->
   <header style="position:sticky;top:0;z-index:50;background:rgba(16,42,76,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)">
     <div style="max-width:1180px;margin:0 auto;padding:14px clamp(20px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:24px">
-      <a href="#top" style="display:flex;align-items:center;text-decoration:none">
+      <a href="#top" style="flex:none;display:flex;align-items:center;text-decoration:none">
         <svg viewBox="0 0 1180 300" height="46" role="img" aria-label="Kabuhayan Paluwagan">
           <circle cx="128" cy="150" r="100" fill="none" stroke="#C9A84C" stroke-width="16"></circle>
           <circle cx="128" cy="150" r="54" fill="#FAF6EC"></circle>
@@ -252,7 +254,7 @@ main a{transition:color .15s ease}
         <a href="transparency.html" style="text-decoration:none;font-size:14.5px;font-weight:600;color:#dbe2ec;transition:color .15s ease">Transparency</a>
         <a href="faq.html" style="text-decoration:none;font-size:14.5px;font-weight:600;color:#dbe2ec;transition:color .15s ease">FAQ</a>
       </nav>
-      <a href="#waitlist" style="text-decoration:none;flex:none;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border-radius:14px;background:var(--gold);color:var(--navy);border:1px solid var(--gold);font-family:var(--font-sans);font-weight:700;font-size:14.5px;box-shadow:var(--shadow-gold);transition:transform .05s ease">Join the waitlist</a>
+      <a class="pl-nav-cta" href="#waitlist" style="text-decoration:none;flex:none;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border-radius:14px;background:var(--gold);color:var(--navy);border:1px solid var(--gold);font-family:var(--font-sans);font-weight:700;font-size:14.5px;box-shadow:var(--shadow-gold);transition:transform .05s ease">Join the waitlist</a>
     </div>
   </header>
 
