@@ -7,8 +7,8 @@
   /* Publishable/anon key is public-safe (RLS enforces security). Paste yours:
      Supabase > Settings > API > Project API keys > "anon"/"publishable". */
   var PALUWAGAN = {
-    url: "https://smealzfktgtyrxdhjued.supabase.co",
-    anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNtZWFsemZrdGd0eXJ4ZGhqdWVkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyNTIwOTQsImV4cCI6MjA5NTgyODA5NH0.vPtH-nGKzpbUnT6iEAz5oxgzPFpf2rydw6L8qwilqfc"
+    url: "https://fpmftflbtcptlfaxracc.supabase.co",
+    anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZwbWZ0ZmxidGNwdGxmYXhyYWNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMxMzI3NDQsImV4cCI6MjA5ODcwODc0NH0.aOu1C1oc4dzfb4N2u6_xE_fh-KVPGjWA9GWsfDq2-pI"
   };
   function configured(){
     return PALUWAGAN.anonKey && PALUWAGAN.anonKey.indexOf("PASTE_") !== 0;
