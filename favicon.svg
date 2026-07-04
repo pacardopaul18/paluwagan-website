@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Paluwagan">
+  <rect width="256" height="256" rx="60" fill="#102A4C"/>
+  <circle cx="128" cy="136" r="62" fill="none" stroke="#C9A84C" stroke-width="15"/>
+  <circle cx="128" cy="136" r="34" fill="#FAF6EC"/>
+  <circle cx="128" cy="74" r="12" fill="#C9A84C"/>
+</svg>
