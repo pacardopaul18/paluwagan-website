@@ -233,8 +233,45 @@ main a{transition:color .15s ease}
     .pl-twocol{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:center}
     @media(max-width:860px){.pl-twocol{grid-template-columns:1fr;gap:36px}}
   </style>
-</head>
+  <script>try{if(sessionStorage.getItem("pw_splash")){document.documentElement.className+=" splash-seen"}else{sessionStorage.setItem("pw_splash","1")}}catch(e){}</script>
+  <style>
+    #splash{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:radial-gradient(ellipse 90% 72% at 50% 41%,#23395a 0%,#152b4c 54%,#0b1d38 100%);border-bottom:5px solid #C9A84C;animation:pwSplashOut .55s ease .95s forwards}
+    #splash .sp-mark{width:min(340px,56vw);height:auto}
+    #splash .sp-word{margin-top:6px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(30px,6vw,52px);color:#fff;letter-spacing:-.01em;line-height:1}
+    #splash .sp-sub{margin-top:5px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:clamp(12px,2.3vw,19px);letter-spacing:.38em;color:#C9A84C}
+    #splash .sp-rule{width:120px;height:1px;background:rgba(255,255,255,.18);margin:20px 0 15px}
+    #splash .sp-tag{font-family:'DM Sans',sans-serif;font-size:clamp(13px,1.6vw,17px);line-height:1.5;color:rgba(233,240,248,.75);max-width:520px}
+    @keyframes pwSplashOut{to{opacity:0;visibility:hidden;pointer-events:none}}
+    .splash-seen #splash{display:none}
+    @media (prefers-reduced-motion:reduce){#splash{animation-duration:.01s;animation-delay:.5s}}
+  </style>
+  </head>
+
 <body>
+  <div id="splash" role="presentation" aria-hidden="true">
+    <svg class="sp-mark" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="200" cy="200" r="185" fill="none" stroke="#C9A84C" stroke-opacity=".14"/>
+      <circle cx="200" cy="200" r="135" fill="none" stroke="#fff" stroke-opacity=".06"/>
+      <circle cx="200" cy="200" r="92" fill="none" stroke="#fff" stroke-opacity=".05"/>
+      <circle cx="200" cy="65" r="4.5" fill="#fff" fill-opacity=".28"/>
+      <circle cx="295" cy="105" r="4" fill="#fff" fill-opacity=".2"/>
+      <circle cx="335" cy="200" r="4" fill="#fff" fill-opacity=".2"/>
+      <circle cx="295" cy="295" r="4" fill="#fff" fill-opacity=".2"/>
+      <circle cx="200" cy="335" r="4" fill="#fff" fill-opacity=".2"/>
+      <circle cx="105" cy="295" r="4" fill="#fff" fill-opacity=".2"/>
+      <circle cx="65" cy="200" r="4" fill="#fff" fill-opacity=".2"/>
+      <circle cx="105" cy="105" r="4" fill="#fff" fill-opacity=".2"/>
+      <circle cx="200" cy="15" r="6.5" fill="#C9A84C"/>
+      <circle cx="200" cy="200" r="52" fill="none" stroke="#C9A84C" stroke-width="9"/>
+      <circle cx="200" cy="200" r="30" fill="#FAF6EC"/>
+      <circle cx="200" cy="148" r="8" fill="#C9A84C"/>
+    </svg>
+    <div class="sp-word">Kabuhayan</div>
+    <div class="sp-sub">PALUWAGAN</div>
+    <div class="sp-rule"></div>
+    <div class="sp-tag">Save together. In the open. Zero return, pure savings.</div>
+  </div>
+
 <a class="skip-link" href="#main">Skip to content</a>
 <main id="main">
 <div style="background:var(--cream);color:var(--ink);font-family:var(--font-sans);min-height:100%;overflow-x:hidden">
