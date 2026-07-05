@@ -318,6 +318,10 @@ main a{transition:color .15s ease}
                   <span style="display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:7px">Get early access</span>
                   <input value="" type="email" placeholder="you@email.com" style="width:100%;padding:15px 16px;border:1px solid var(--hairline);border-radius:12px;background:var(--white);font-family:var(--font-sans);font-size:15px;color:var(--ink);transition:border-color .15s ease,box-shadow .15s ease">
                 </label>
+                <label style="display:block">
+                  <span style="display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:7px">Phone number <span style="font-weight:400;color:var(--muted)">(optional, if you have no email)</span></span>
+                  <input value="" type="tel" inputmode="tel" autocomplete="tel" placeholder="09XX XXX XXXX" style="width:100%;padding:15px 16px;border:1px solid var(--hairline);border-radius:12px;background:var(--white);font-family:var(--font-sans);font-size:15px;color:var(--ink);transition:border-color .15s ease,box-shadow .15s ease">
+                </label>
                 <button type="submit" style="width:100%;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;background:var(--gold);color:var(--navy);border:1px solid var(--gold);font-family:var(--font-sans);font-weight:700;font-size:16px;box-shadow:var(--shadow-gold);cursor:pointer;transition:transform .05s ease">Join the waitlist</button>
               </form>
               <p style="margin:11px 2px 0;font-size:12.5px;color:var(--muted)">Free to join · No spam · Be first when we launch in your barangay.</p>
@@ -325,7 +329,7 @@ main a{transition:color .15s ease}
             <div class="js-done" hidden>
               <div style="display:flex;gap:14px;align-items:flex-start;background:var(--success-soft);border:1px solid rgba(46,125,91,.25);border-radius:16px;padding:18px 18px">
                 <span style="flex:none;width:38px;height:38px;border-radius:50%;background:var(--success);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px">&#10003;</span>
-                <div><div class="js-ok-title" style="font-size:15.5px;font-weight:700;color:var(--green-deep)">You&#39;re on the list. Salamat!</div><div style="font-size:13.5px;color:var(--ink);margin-top:3px;line-height:1.5">We&#39;ll email <strong><span class="js-echo-email"></span></strong> the moment Paluwagan opens for early access.</div><div style="font-size:12.5px;color:var(--ink);opacity:.68;margin-top:8px;line-height:1.5">Check your inbox for our confirmation email. If it&#39;s not there, look in your <strong>Promotions</strong> tab or <strong>Spam</strong> folder.</div><div class="js-socials" hidden style="margin-top:10px;font-size:13px;color:var(--ink)">Follow us for updates: <a href="https://www.facebook.com/PaluwaganByKabuhayan/" style="color:var(--green-deep);font-weight:600;text-decoration:underline">Facebook</a> &middot; <a href="https://www.linkedin.com/showcase/paluwagan-by-kabuhayan" style="color:var(--green-deep);font-weight:600;text-decoration:underline">LinkedIn</a></div></div>
+                <div><div class="js-ok-title" style="font-size:15.5px;font-weight:700;color:var(--green-deep)">You&#39;re on the list. Salamat!</div><div class="js-ok-msg" style="font-size:13.5px;color:var(--ink);margin-top:3px;line-height:1.5">We&#39;ll email <strong><span class="js-echo-email"></span></strong> the moment Paluwagan opens for early access.</div><div class="js-inbox-hint" style="font-size:12.5px;color:var(--ink);opacity:.68;margin-top:8px;line-height:1.5">Check your inbox for our confirmation email. If it&#39;s not there, look in your <strong>Promotions</strong> tab or <strong>Spam</strong> folder.</div><div class="js-socials" hidden style="margin-top:10px;font-size:13px;color:var(--ink)">Follow us for updates: <a href="https://www.facebook.com/PaluwaganByKabuhayan/" style="color:var(--green-deep);font-weight:600;text-decoration:underline">Facebook</a> &middot; <a href="https://www.linkedin.com/showcase/paluwagan-by-kabuhayan" style="color:var(--green-deep);font-weight:600;text-decoration:underline">LinkedIn</a></div></div>
               </div>
             </div>
           </div>
@@ -612,6 +616,7 @@ main a{transition:color .15s ease}
         <div class="js-form">
           <form style="display:flex;flex-direction:column;gap:12px">
             <input value="" type="email" placeholder="you@email.com" style="width:100%;padding:16px;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(255,255,255,.08);font-family:var(--font-sans);font-size:15px;color:#fff;transition:border-color .15s ease,box-shadow .15s ease">
+            <input value="" type="tel" inputmode="tel" autocomplete="tel" placeholder="Or phone: 09XX XXX XXXX" style="width:100%;padding:16px;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(255,255,255,.08);font-family:var(--font-sans);font-size:15px;color:#fff;transition:border-color .15s ease,box-shadow .15s ease">
             <button type="submit" style="width:100%;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;background:var(--gold);color:var(--navy);border:1px solid var(--gold);font-family:var(--font-sans);font-weight:700;font-size:16px;box-shadow:var(--shadow-gold);cursor:pointer;transition:transform .05s ease">Join the waitlist</button>
           </form>
           <p style="margin:12px 0 0;font-size:12.5px;color:#9db2cd">Free to join · No spam · You get back exactly what you put in.</p>
@@ -619,7 +624,7 @@ main a{transition:color .15s ease}
         <div class="js-done" hidden>
           <div style="display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.08);border:1px solid rgba(201,168,76,.4);border-radius:16px;padding:20px;text-align:left">
             <span style="flex:none;width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:19px">&#10003;</span>
-            <div><div class="js-ok-title" style="font-size:16px;font-weight:700;color:#fff">You&#39;re on the list. Salamat!</div><div style="font-size:13.5px;color:#cdd8e6;margin-top:3px;line-height:1.5">We&#39;ll email <strong style="color:#fff"><span class="js-echo-email"></span></strong> as soon as your slot is ready.</div><div style="font-size:12.5px;color:#cdd8e6;opacity:.9;margin-top:8px;line-height:1.5">Check your inbox for our confirmation email. If it&#39;s not there, look in your <strong style="color:#fff">Promotions</strong> tab or <strong style="color:#fff">Spam</strong> folder.</div><div class="js-socials" hidden style="margin-top:10px;font-size:13px;color:#cdd8e6">Follow us for updates: <a href="https://www.facebook.com/PaluwaganByKabuhayan/" style="color:#fff;font-weight:600;text-decoration:underline">Facebook</a> &middot; <a href="https://www.linkedin.com/showcase/paluwagan-by-kabuhayan" style="color:#fff;font-weight:600;text-decoration:underline">LinkedIn</a></div></div>
+            <div><div class="js-ok-title" style="font-size:16px;font-weight:700;color:#fff">You&#39;re on the list. Salamat!</div><div class="js-ok-msg" style="font-size:13.5px;color:#cdd8e6;margin-top:3px;line-height:1.5">We&#39;ll email <strong style="color:#fff"><span class="js-echo-email"></span></strong> as soon as your slot is ready.</div><div class="js-inbox-hint" style="font-size:12.5px;color:#cdd8e6;opacity:.9;margin-top:8px;line-height:1.5">Check your inbox for our confirmation email. If it&#39;s not there, look in your <strong style="color:#fff">Promotions</strong> tab or <strong style="color:#fff">Spam</strong> folder.</div><div class="js-socials" hidden style="margin-top:10px;font-size:13px;color:#cdd8e6">Follow us for updates: <a href="https://www.facebook.com/PaluwaganByKabuhayan/" style="color:#fff;font-weight:600;text-decoration:underline">Facebook</a> &middot; <a href="https://www.linkedin.com/showcase/paluwagan-by-kabuhayan" style="color:#fff;font-weight:600;text-decoration:underline">LinkedIn</a></div></div>
           </div>
         </div>
       </div>
@@ -738,6 +743,8 @@ main a{transition:color .15s ease}
   function emailIn(scope){ return val(scope, 'input[type=email]') || val(scope, 'input[name*=mail i]'); }
   function nameIn(scope){ return val(scope, 'input[name*=name i]') || val(scope, 'input[type=text]'); }
   function messageIn(scope){ return val(scope, 'textarea'); }
+  function phoneIn(scope){ return val(scope, 'input[type=tel]'); }
+  function normPhone(raw){ var s=(raw||"").replace(/[\s\-()]/g,""); if(/^09\d{9}$/.test(s)) return "+63"+s.slice(1); if(/^\+639\d{9}$/.test(s)) return s; return null; }
   function showErr(form, msg){
     var e = form.querySelector(".js-err");
     if(!e){
@@ -775,13 +782,25 @@ main a{transition:color .15s ease}
       var isContact = !!form.querySelector("textarea");
       var email = emailIn(form);
 
-      if(!email){ showErr(form, "Please enter your email."); return; }
-      if(isContact && !messageIn(form)){ showErr(form, "Please add a short message."); return; }
+      var phone = null;
+      if(isContact){
+        if(!email){ showErr(form, "Please enter your email."); return; }
+        if(!messageIn(form)){ showErr(form, "Please add a short message."); return; }
+      } else {
+        var praw = phoneIn(form);
+        phone = praw ? normPhone(praw) : null;
+        if(praw && !phone){ showErr(form, "Enter a valid PH mobile number (09XXXXXXXXX or +63XXXXXXXXX)."); return; }
+        if(!email && !phone){ showErr(form, "Enter your email or phone number to join."); return; }
+      }
 
       function succeed(status){
         if(!done) return;
         var echo = done.querySelectorAll(".js-echo-email");
         for(var i=0;i<echo.length;i++){ echo[i].textContent = email; }
+        if(!email && phone){
+          var msg = done.querySelector(".js-ok-msg"); if(msg){ msg.innerHTML = "We&#39;ll text <strong>" + phone + "</strong> the moment Paluwagan opens for early access."; }
+          var ih = done.querySelector(".js-inbox-hint"); if(ih){ ih.setAttribute("hidden",""); }
+        }
         var nm = done.querySelector(".js-name");
         if(nm){ var n = nameIn(form); nm.textContent = n ? n.split(/\s+/)[0] : "kaibigan"; }
         if(status === 409){
@@ -804,7 +823,7 @@ main a{transition:color .15s ease}
       } else {
         table = "paluwagan_web_waitlist";
         var idx = waitlistForms.indexOf(form);
-        payload = { email: email, source: idx <= 0 ? "landing_hero" : "landing_bottom" };
+        payload = { email: email || null, phone: phone || null, source: idx <= 0 ? "landing_hero" : "landing_bottom" };
       }
 
       t.disabled = true;

@@ -447,6 +447,8 @@ main a{transition:color .15s ease}
   function emailIn(scope){ return val(scope, 'input[type=email]') || val(scope, 'input[name*=mail i]'); }
   function nameIn(scope){ return val(scope, 'input[name*=name i]') || val(scope, 'input[type=text]'); }
   function messageIn(scope){ return val(scope, 'textarea'); }
+  function phoneIn(scope){ return val(scope, 'input[type=tel]'); }
+  function normPhone(raw){ var s=(raw||"").replace(/[\s\-()]/g,""); if(/^09\d{9}$/.test(s)) return "+63"+s.slice(1); if(/^\+639\d{9}$/.test(s)) return s; return null; }
   function showErr(form, msg){
     var e = form.querySelector(".js-err");
     if(!e){
@@ -484,13 +486,25 @@ main a{transition:color .15s ease}
       var isContact = !!form.querySelector("textarea");
       var email = emailIn(form);
 
-      if(!email){ showErr(form, "Please enter your email."); return; }
-      if(isContact && !messageIn(form)){ showErr(form, "Please add a short message."); return; }
+      var phone = null;
+      if(isContact){
+        if(!email){ showErr(form, "Please enter your email."); return; }
+        if(!messageIn(form)){ showErr(form, "Please add a short message."); return; }
+      } else {
+        var praw = phoneIn(form);
+        phone = praw ? normPhone(praw) : null;
+        if(praw && !phone){ showErr(form, "Enter a valid PH mobile number (09XXXXXXXXX or +63XXXXXXXXX)."); return; }
+        if(!email && !phone){ showErr(form, "Enter your email or phone number to join."); return; }
+      }
 
       function succeed(status){
         if(!done) return;
         var echo = done.querySelectorAll(".js-echo-email");
         for(var i=0;i<echo.length;i++){ echo[i].textContent = email; }
+        if(!email && phone){
+          var msg = done.querySelector(".js-ok-msg"); if(msg){ msg.innerHTML = "We&#39;ll text <strong>" + phone + "</strong> the moment Paluwagan opens for early access."; }
+          var ih = done.querySelector(".js-inbox-hint"); if(ih){ ih.setAttribute("hidden",""); }
+        }
         var nm = done.querySelector(".js-name");
         if(nm){ var n = nameIn(form); nm.textContent = n ? n.split(/\s+/)[0] : "kaibigan"; }
         if(status === 409){
@@ -513,7 +527,7 @@ main a{transition:color .15s ease}
       } else {
         table = "paluwagan_web_waitlist";
         var idx = waitlistForms.indexOf(form);
-        payload = { email: email, source: idx <= 0 ? "landing_hero" : "landing_bottom" };
+        payload = { email: email || null, phone: phone || null, source: idx <= 0 ? "landing_hero" : "landing_bottom" };
       }
 
       t.disabled = true;
