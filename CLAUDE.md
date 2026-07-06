@@ -24,7 +24,7 @@ is built and deployed INDEPENDENTLY with its own repo/stack/deploy. Do not merge
 
 ## Repo layout
 The site lives at the repo ROOT (flattened; Vercel Root Directory is `.`). All pages, `assets/`,
-`favicon.svg`, and `.gitattributes` sit at root.
+and `.gitattributes` sit at root.
 
 ## Deploy
 GitHub `main` -> Vercel auto-deploys. Framework preset "Other", no build command, output = root.
@@ -65,14 +65,12 @@ Workflow: edit in VS Code -> commit -> push `main` -> Vercel redeploys. No GitHu
 - Whether the draft legal pages come off `noindex`.
 - Staging vs production Supabase target before a hard launch.
 - Self-host DM Sans woff2 (currently Google Fonts @import) for DPA/privacy, optional.
-- Swap placeholder `favicon.svg` and the inline SVG logo lockup for the official brand-folder
-  assets once they are added to the repo.
 
 ## Recent maintenance (2026-07)
 Full mobile / SEO / a11y audit worked off. Current-state facts for the next session:
 - Header "Join the waitlist" CTA removed (it was a redundant same-page anchor). Mobile nav is a
   hamburger icon with Esc-close, click-outside-close, and close-on-link (injected by site.js).
-- `favicon.svg` added at root (placeholder brand mark; official swap pending, see open items).
+- Official brand assets added under `assets/img/` (PNG favicon set + horizontal lockups); the placeholder `favicon.svg` was removed and pages now link the PNG favicons.
 - `privacy.html` now discloses waitlist/contact collection (DPA); stray `privacy (1).html` removed.
 - FAQ group-size copy reconciled to the 3-15 member cap (accordion + JSON-LD).
 - Line endings pinned to LF via `.gitattributes` (blobs were already LF).
