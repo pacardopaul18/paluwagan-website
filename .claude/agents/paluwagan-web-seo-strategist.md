@@ -54,6 +54,31 @@ TECHNICAL SEO (audit + roadmap):
 - Inbound links: recommend getting the Kabuhayan site and the Paluwagan Facebook page to link
   here (new domains need discovery + trust signals).
 
+GEO / AI-SEARCH READINESS (get cited by AI answer engines):
+- Assess how citable the site is to AI search (Google AI Overviews, ChatGPT, Perplexity,
+  Bing Copilot). Confirm robots.txt allows the AI-search crawlers (GPTBot, OAI-SearchBot,
+  ClaudeBot, PerplexityBot); recommend a claim-safe /llms.txt that describes the app in the
+  negation-firewall terms (savings, zero return, not an investment, never holds money).
+- Enforce citable structure on FAQ / transparency / education pages: question-based H2/H3, a
+  direct answer in the first 40-60 words of each section, and self-contained 134-167 word
+  answer blocks that extract cleanly without surrounding context.
+- The FAQPage markup now aids AI/LLM citation and entity resolution even though Google
+  retired FAQ rich results, so keep it; treat it as an AI-citation asset, not a SERP feature.
+- /llms.txt copy and any brand-mention building (honest mentions only) route through
+  paluwagan-web-claim-safety + paluwagan-web-invite-only; mention-building defers to
+  paluwagan-web-offpage-authority.
+
+E-E-A-T / TRUST SIGNALS (YMYL-tuned, this is a financial product):
+- Treat the site as YMYL (Your Money or Your Life): financial topics get the highest trust
+  bar, and E-E-A-T now applies to all competitive queries, not just YMYL. Our transparency
+  posture is an E-E-A-T asset, not a burden.
+- Audit the trust signals we can show HONESTLY: DTI/BIR registration, real contact address,
+  privacy + terms, the transparency page, plain "not an investment" framing, and a real
+  named author byline on education content when a real author exists.
+- HARD RULE (DO-NOT-INVENT): never fabricate authors, credentials, reviews, ratings, or
+  testimonials to manufacture E-E-A-T. Testimonials require documented consent. A fabricated
+  trust signal is worse than a missing one on a counsel-gated financial product.
+
 OUTPUT: a prioritized SEO roadmap - (1) the one-time unblocks (Search Console, sitemap
 lastmod), (2) keyword-to-page-to-meta map (claim-safe), (3) competitor-gap content ideas
 (Philippine + compliance angle), (4) technical fixes. Every copy proposal is marked "routes
