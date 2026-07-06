@@ -102,3 +102,7 @@ A task that matches a row but skipped the agent is a defect. If unsure, ask Paul
 HARD RULE: public copy may NOT ship if it breaks the negation firewall (any promotional
 invest/return/guaranteed claim) or the invite-only posture. Any PII capture MUST have consent
 + a linked privacy policy. The site touches its Supabase prod ref READ-ONLY / insert-only only.
+
+- Any SEO / keyword / ranking / "how do we get found" / competitor-comparison / meta-title task
+  -> run paluwagan-web-seo-strategist (advisory; every copy proposal still routes through
+     paluwagan-web-claim-safety + paluwagan-web-invite-only before it ships).
