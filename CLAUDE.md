@@ -78,3 +78,27 @@ Full mobile / SEO / a11y audit worked off. Current-state facts for the next sess
 - Line endings pinned to LF via `.gitattributes` (blobs were already LF).
 - Discipline reminder: run ONE Window A lane; serialize any briefs that share a file (two
   concurrent same-file A-lane edits caused avoidable races this session).
+
+## AGENT AUTO-ROUTING (Claude Code: consult on EVERY task before acting)
+Agents do NOT self-trigger. Match each task to this table and invoke the named agent BY NAME.
+A task that matches a row but skipped the agent is a defect. If unsure, ask Paul; never run un-agented.
+
+- Any public marketing copy change (hero, CTA, badges, FAQ, transparency, meta, footer)
+  -> run paluwagan-web-claim-safety (BLOCKING; the negation firewall) AND
+     paluwagan-web-invite-only (waitlist/invite-only posture).
+- Any change to a PII form (waitlist, contact) or a new field/form collecting personal data
+  -> run paluwagan-web-privacy-consent (RA 10173: consent + linked privacy policy required).
+- Any change to Supabase calls, form submission code, or embedded keys
+  -> run paluwagan-web-prodref-guard (fpmftflbtcptlfaxracc read-only/insert-only; never write; never app/staging refs).
+- Any change to page structure, meta, images, sitemap, robots, or a new page
+  -> run paluwagan-web-audit (SEO + accessibility + perf).
+- Any CSS / styling / typography change
+  -> run paluwagan-web-brand-guard (navy/gold-primary/cream/DM Sans; gold IS the primary CTA).
+- Any layout / responsive change
+  -> run paluwagan-web-viewport-guard (412px Samsung A35 first).
+- Before ANY deploy / push
+  -> run the relevant guards above for what changed; public copy always re-runs claim-safety + invite-only.
+
+HARD RULE: public copy may NOT ship if it breaks the negation firewall (any promotional
+invest/return/guaranteed claim) or the invite-only posture. Any PII capture MUST have consent
++ a linked privacy policy. The site touches its Supabase prod ref READ-ONLY / insert-only only.
