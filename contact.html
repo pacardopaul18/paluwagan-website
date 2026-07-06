@@ -212,6 +212,9 @@ main a{transition:color .15s ease}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+.form-consent{display:flex;align-items:flex-start;gap:9px;margin-top:2px;font-family:var(--font-sans);font-size:12.5px;line-height:1.45;color:var(--muted);cursor:pointer}
+.form-consent input{flex:none;width:16px;height:16px;margin-top:1px;accent-color:var(--gold);cursor:pointer}
+.form-consent a{color:#8a6f1f;font-weight:600}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Paluwagan by Kabuhayan", "url": "https://paluwagan.kabuhayan.app", "email": "paluwagan@kabuhayan.app", "telephone": "+63 924 372 3044", "description": "Paluwagan helps groups organize and record their savings circles. It is not a bank, e-wallet, lender, or insurer, and it does not hold or move money.", "address": {"@type": "PostalAddress", "streetAddress": "Zone 1 Maycatmon, Milaor", "addressRegion": "Camarines Sur", "postalCode": "4413", "addressCountry": "PH"}}</script>
 <style>
@@ -274,8 +277,11 @@ main a{transition:color .15s ease}
                 <span style="display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:7px">Message</span>
                 <textarea value="" rows="5" placeholder="How can we help?" style="width:100%;padding:14px 15px;border:1px solid var(--hairline);border-radius:12px;background:var(--white);font-family:var(--font-sans);font-size:15px;color:var(--ink);resize:vertical;transition:border-color .15s ease,box-shadow .15s ease"></textarea>
               </label>
+              <label class="form-consent">
+                <input type="checkbox" name="consent" required>
+                <span>I agree to Paluwagan handling the name, email, and message I provide so the team can reply to me, as described in the <a href="privacy.html">Privacy Policy</a>.</span>
+              </label>
               <button type="submit" style="width:100%;min-height:52px;border-radius:14px;background:var(--gold);color:var(--navy);border:1px solid var(--gold);font-family:var(--font-sans);font-weight:700;font-size:16px;box-shadow:var(--shadow-gold);cursor:pointer;transition:transform .05s ease">Send message</button>
-              <p style="margin:2px 0 0;font-size:12px;color:var(--muted);line-height:1.5">By sending, you agree to our handling of your details as described in the <a href="privacy.html" style="color:#8a6f1f;font-weight:600">Privacy policy</a>.</p>
             </form>
           </div>
           <div class="js-done" hidden>
