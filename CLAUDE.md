@@ -106,3 +106,12 @@ invest/return/guaranteed claim) or the invite-only posture. Any PII capture MUST
 - Any SEO / keyword / ranking / "how do we get found" / competitor-comparison / meta-title task
   -> run paluwagan-web-seo-strategist (advisory; every copy proposal still routes through
      paluwagan-web-claim-safety + paluwagan-web-invite-only before it ships).
+
+- Any off-page SEO / backlinks / authority / mentions / directory-listing task
+  -> run paluwagan-web-offpage-authority (honest links only; copy through claim-safety + invite-only).
+- Any content strategy / blog / article / "what should we publish" task
+  -> run paluwagan-web-content-strategist (education-led; claim-safe by design).
+- Any email sequence / nurture / drip / waitlist-email task
+  -> run paluwagan-web-email-nurture (consent-gated; claim-safe; idle until there are signups).
+- Any analytics / measurement / tracking / "what is working" task
+  -> run paluwagan-web-growth-measurement (privacy-first RA 10173; no fabricated CAC/ROAS).
