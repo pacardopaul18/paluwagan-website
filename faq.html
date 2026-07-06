@@ -410,6 +410,8 @@ main a{transition:color .15s ease}
         if(praw && !phone){ showErr(form, "Enter a valid PH mobile number (09XXXXXXXXX or +63XXXXXXXXX)."); return; }
         if(!email && !phone){ showErr(form, "Enter your email or phone number to join."); return; }
       }
+      var consentEl = form.querySelector('input[name="consent"]');
+      if(consentEl && !consentEl.checked){ showErr(form, "Please tick the box to agree to the Privacy Policy."); return; }
 
       function succeed(status){
         if(!done) return;

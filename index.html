@@ -187,6 +187,11 @@
   outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
 img,svg{max-width:100%}
 main a{transition:color .15s ease}
+.form-consent{display:flex;align-items:flex-start;gap:9px;margin-top:2px;font-family:var(--font-sans);font-size:12.5px;line-height:1.45;color:var(--muted);cursor:pointer}
+.form-consent input{flex:none;width:16px;height:16px;margin-top:1px;accent-color:var(--gold);cursor:pointer}
+.form-consent a{color:#8a6f1f;font-weight:600}
+.form-consent-on-dark{color:#9db2cd}
+.form-consent-on-dark a{color:#cdd8e6}
 .faq-q{transition:background .15s ease}
 .faq-q:hover{background:rgba(16,42,76,.02)}
 .faq-a{animation:faqIn .18s ease}
@@ -321,6 +326,10 @@ main a{transition:color .15s ease}
                 <label style="display:block">
                   <span style="display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:7px">Phone number <span style="font-weight:400;color:var(--muted)">(optional, if you have no email)</span></span>
                   <input value="" type="tel" inputmode="tel" autocomplete="tel" placeholder="09XX XXX XXXX" style="width:100%;padding:15px 16px;border:1px solid var(--hairline);border-radius:12px;background:var(--white);font-family:var(--font-sans);font-size:15px;color:var(--ink);transition:border-color .15s ease,box-shadow .15s ease">
+                </label>
+                <label class="form-consent">
+                  <input type="checkbox" name="consent" required>
+                  <span>I agree to Paluwagan storing my email (and phone, if given) to notify me when it launches, as described in the <a href="privacy.html">Privacy Policy</a>.</span>
                 </label>
                 <button type="submit" style="width:100%;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;background:var(--gold);color:var(--navy);border:1px solid var(--gold);font-family:var(--font-sans);font-weight:700;font-size:16px;box-shadow:var(--shadow-gold);cursor:pointer;transition:transform .05s ease">Join the waitlist</button>
               </form>
@@ -617,6 +626,10 @@ main a{transition:color .15s ease}
           <form style="display:flex;flex-direction:column;gap:12px">
             <input value="" type="email" placeholder="you@email.com" style="width:100%;padding:16px;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(255,255,255,.08);font-family:var(--font-sans);font-size:15px;color:#fff;transition:border-color .15s ease,box-shadow .15s ease">
             <input value="" type="tel" inputmode="tel" autocomplete="tel" placeholder="Or phone: 09XX XXX XXXX" style="width:100%;padding:16px;border:1px solid rgba(255,255,255,.2);border-radius:12px;background:rgba(255,255,255,.08);font-family:var(--font-sans);font-size:15px;color:#fff;transition:border-color .15s ease,box-shadow .15s ease">
+            <label class="form-consent form-consent-on-dark">
+              <input type="checkbox" name="consent" required>
+              <span>I agree to Paluwagan storing my email (and phone, if given) to notify me when it launches, as described in the <a href="privacy.html">Privacy Policy</a>.</span>
+            </label>
             <button type="submit" style="width:100%;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;background:var(--gold);color:var(--navy);border:1px solid var(--gold);font-family:var(--font-sans);font-weight:700;font-size:16px;box-shadow:var(--shadow-gold);cursor:pointer;transition:transform .05s ease">Join the waitlist</button>
           </form>
           <p style="margin:12px 0 0;font-size:12.5px;color:#9db2cd">Free to join · No spam · You get back exactly what you put in.</p>
@@ -792,6 +805,8 @@ main a{transition:color .15s ease}
         if(praw && !phone){ showErr(form, "Enter a valid PH mobile number (09XXXXXXXXX or +63XXXXXXXXX)."); return; }
         if(!email && !phone){ showErr(form, "Enter your email or phone number to join."); return; }
       }
+      var consentEl = form.querySelector('input[name="consent"]');
+      if(consentEl && !consentEl.checked){ showErr(form, "Please tick the box to agree to the Privacy Policy."); return; }
 
       function succeed(status){
         if(!done) return;
