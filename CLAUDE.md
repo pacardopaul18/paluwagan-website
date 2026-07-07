@@ -16,6 +16,11 @@ is built and deployed INDEPENDENTLY with its own repo/stack/deploy. Do not merge
 - If you change shared CSS/JS, update it in BOTH the inline copy in the pages and the `assets/` file
   (or regenerate). Do not reintroduce external `<link>`/`<script src>` to those assets - it breaks
   standalone rendering (this was a real bug).
+- CLEAN URLs: Vercel `cleanUrls: true` serves `/faq` from `faq.html` and 301-redirects `/faq.html`
+  to `/faq`. So ALL internal links, canonicals, `og:url`, JSON-LD `url`, and `sitemap.xml` `<loc>`
+  entries are EXTENSIONLESS (`href="faq"`, `href="/"`, `href="/#waitlist"`) - never add `.html` back.
+  Tradeoff (opted into): extensionless links do NOT resolve over local `file://`, so inter-page
+  navigation only works on the deployed site; each page still RENDERS standalone (assets inlined).
 
 ## Pages
 - `index.html` (Landing), `transparency.html`, `faq.html`, `contact.html` -> indexable
