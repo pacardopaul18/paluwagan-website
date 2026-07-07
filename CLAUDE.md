@@ -74,6 +74,9 @@ Full mobile / SEO / a11y audit worked off. Current-state facts for the next sess
 - `privacy.html` now discloses waitlist/contact collection (DPA); stray `privacy (1).html` removed.
 - FAQ group-size copy reconciled to the 3-15 member cap (accordion + JSON-LD).
 - Line endings pinned to LF via `.gitattributes` (blobs were already LF).
+- Chat assistant (`super-action` Edge Function) renders LIVE, server-generated replies that
+  do NOT pass the DO-NOT-INVENT copy pipeline; run the live claim-safety spot-check before any
+  public announcement and after any prompt change. Protocol: `docs/chat-spot-check.md`.
 - Discipline reminder: run ONE Window A lane; serialize any briefs that share a file (two
   concurrent same-file A-lane edits caused avoidable races this session).
 
