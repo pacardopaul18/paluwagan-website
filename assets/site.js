@@ -37,7 +37,7 @@
   document.addEventListener("click", function(e){
     var btn = e.target.closest && e.target.closest(".faq-q");
     if(!btn) return;
-    var panel = btn.parentElement.querySelector(".faq-a");
+    var panel = btn.closest("div").querySelector(".faq-a");
     var sign  = btn.querySelector(".faq-sign");
     var open  = btn.getAttribute("aria-expanded") === "true";
     btn.setAttribute("aria-expanded", open ? "false" : "true");
@@ -146,7 +146,7 @@
 
   /* ================= mobile nav ================= */
   document.addEventListener("DOMContentLoaded", function(){
-    var links = document.querySelector(".pl-navlinks");
+    var links = document.querySelector(".pl-navlinks, .plh-links");
     if(!links) return;
     var header = links.closest("header") || links.parentElement;
     if(getComputedStyle(header).position === "static"){ header.style.position = "relative"; }
