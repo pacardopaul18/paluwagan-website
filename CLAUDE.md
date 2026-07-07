@@ -121,3 +121,43 @@ invest/return/guaranteed claim) or the invite-only posture. Any PII capture MUST
   -> run paluwagan-web-email-nurture (consent-gated; claim-safe; idle until there are signups).
 - Any analytics / measurement / tracking / "what is working" task
   -> run paluwagan-web-growth-measurement (privacy-first RA 10173; no fabricated CAC/ROAS).
+
+## MARKETING KIT ROUTING (Plan-Left depth; start broad goals with the orchestrator)
+Start any BROAD marketing goal with paluwagan-web-marketing-orchestrator - it sequences the plan and
+routes to the specialists. For a specific task, invoke the specialist directly. ALL copy routes
+through paluwagan-web-claim-safety (BLOCKING) + paluwagan-web-invite-only.
+
+- Broad goal / "marketing plan" / "where do I start" / "get found"
+  -> paluwagan-web-marketing-orchestrator (sequences + routes; enforces posture; HOLDS paid ads).
+- Technical SEO / indexing / Core Web Vitals / schema / sitemap
+  -> paluwagan-web-seo-technical.
+- Titles / meta / headings / keywords / on-page
+  -> paluwagan-web-seo-onpage (never head-target "digital/online paluwagan").
+- Local / Philippine / geo SEO
+  -> paluwagan-web-seo-local.
+- AI-search / GEO / "get cited by ChatGPT" / llms.txt / entity clarity
+  -> paluwagan-web-seo-ai (AI-crawler stance is a Paul decision).
+- Paid ads / campaigns
+  -> paluwagan-web-ads-strategist (PROTECTIVE: default answer is compliant waitlist growth, not
+     public-acquisition ads, which fight invite-only).
+- CAC / ROAS / acquisition cost
+  -> paluwagan-web-cac-roas (HONEST: free pre-launch invite-only product has no CAC/ROAS; no
+     fabricated numbers).
+- Content strategy / blog / briefs / safety-education content
+  -> paluwagan-web-content-strategist.
+- Social media / what to post
+  -> paluwagan-web-social (safety/education angle; awareness + waitlist, never public signup).
+- Email / nurture / waitlist emails
+  -> paluwagan-web-email-nurture (consent-gated; idle until signups).
+- Backlinks / authority / off-page / PR / mentions
+  -> paluwagan-web-offpage-authority (honest links only).
+- Conversions / CRO / landing / waitlist form
+  -> paluwagan-web-cro (trust is the lever; keep the consent gate; no dark patterns).
+- Analytics / measurement / tracking
+  -> paluwagan-web-growth-measurement (privacy-first; no fabricated metrics).
+- Full site audit / accessibility / performance
+  -> paluwagan-web-audit.
+
+POSTURE (all agents): savings not investment, invite-only, no custody/yield; negation firewall in
+all copy; NEVER head-target "digital/online paluwagan" (SEC scam-warning term); gold is the primary
+CTA; prod ref fpmftflbtcptlfaxracc READ-ONLY / insert-only; paid public acquisition is HELD.
