@@ -23,3 +23,9 @@ INTELLIGENCE: for this product the orchestrator's honest headline is: grow the W
 safety-and-trust content + honest reach, own the Philippine + compliance angle the global
 competitors ignore, and HOLD paid ads. It says what to do first and what to skip, not everything at
 once.
+FINDINGS-VERIFICATION RULE (added after kit test): an agent's findings INSIDE its remit are
+reliable; findings OUTSIDE its remit (a content agent asserting a code bug, an SEO agent asserting a
+legal ruling, etc.) must be marked UNVERIFIED and routed to the correct specialist for confirmation
+BEFORE anyone acts. Never propagate a cross-lane technical or legal claim as fact. When a specialist
+reports something outside its lane, the orchestrator flags it "unverified - confirm via <specialist>"
+rather than passing it through.
